@@ -1,0 +1,277 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;    
+}
+
+body {
+  background-color: #020202fb;    
+  min-height: 100vh;
+}
+
+.pokedex-wrapper {
+  position: relative;
+  width: 600px;
+  margin: 0 auto;    
+}
+
+.Imagem1 {
+  width: 100%;
+  height: auto;
+  display: block;    
+}
+
+.tela-conteudo {
+  position: absolute;
+  top: 25%;
+  left: 12%;
+  right: 12%;    
+  height: 43%;
+  bottom: 11%;
+  overflow-y: auto;
+  padding: 0;
+}
+
+.floresta {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;    
+  height: 100%;
+  overflow: hidden;
+}
+
+.Imagem2 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  margin: 0;    
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), transparent);
+  color: #fff;
+  text-align: center;
+  z-index: 3;    
+}
+
+header input {
+  padding: 6px 10px;
+  width: 80%; 
+  border: none;
+  border-radius: 6px;
+  margin-top: 8px; 
+}
+
+/* === Área dos Resultados === */
+#pokedex-container {
+  position: relative;
+  top: 30px;
+  z-index: 2;
+  padding: 70px 10px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* ← Centraliza TUDO automaticamente */
+  align-items: flex-start;
+  gap: 12px;    
+}
+
+/* === Classe para ESCONDER elementos === */
+.oculto {
+  display: none !important;
+}
+
+/* === Botões de Escolha de Tipo === */
+.tipos-escolha {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.botao-tipo {
+  padding: 12px 8px;
+  border: none;
+  border-radius: 8px;
+  background: #fff;
+  color: #333;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+  transition: transform 0.2s;
+}
+
+.botao-tipo:hover {
+  transform: scale(1.05);
+  background: #f5f5f5;
+}
+
+/* === Card Individual === */
+.pokemon-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  width: 180px;
+  min-height: 220px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);    
+}
+
+.pokemon-img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin: 0 auto;
+  display: block;    
+}
+
+.pokemon-name {
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 8px;
+  margin-bottom: 10px;
+  color: #222;    
+}
+
+.texto1, .texto2, .texto3,
+.texto4, .texto5, .texto6,
+.texto7, .texto8, .texto9,
+.texto10, .texto11, .texto12 {
+  font-size: 11px;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  line-height: 1.6;
+  text-align: left;
+  margin: 3px 0;
+  white-space: nowrap;
+}
+
+/* === Ajuste de texto Pokémon tipo Elétrico ===*/
+
+.texto1 {
+position: relative;
+left: 32%;  
+}
+
+
+/* === Ajute de texto Pokémon tipo Planta ===*/
+
+.texto4 {
+position: relative;
+left: 32%;  
+}
+
+
+/*=== Ajuste de texto Pokémon tipo Fogo ===*/
+
+.texto7 {
+position: relative;
+left: 32%;  
+}
+
+
+
+/*=== Ajuste de texto Pokémon tipo Água ===*/
+
+.texto10 {
+position: relative;
+left: 32%;  
+}
+
+
+
+
+
+
+
+/* === RESPONSIVIDADE === */
+
+/* Telas menores — tablets e celulares grandes */
+@media (max-width: 620px) {
+  .pokedex-wrapper {
+    width: 95%;
+    max-width: 500px;
+  }
+
+  .tela-conteudo {
+    top: 22%;
+    left: 10%;
+    right: 10%;
+    height: 48%;
+    bottom: 10%;
+  }
+
+  .pokemon-card {
+    width: 160px;
+    min-height: 200px;
+    padding: 12px;
+  }
+
+  .pokemon-img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .tipos-escolha {
+    gap: 8px;
+  }
+
+  .botao-tipo {
+    padding: 10px 6px;
+    font-size: 13px;
+  }
+
+  .texto1, .texto2, .texto3,
+  .texto4, .texto5, .texto6,
+  .texto7, .texto8, .texto9,
+  .texto10, .texto11, .texto12 {
+    font-size: 10px;
+  }
+
+
+ 
+}
+
+/* Formato para celulares */
+@media (max-width: 420px) {
+  .pokedex-wrapper {
+    width: 100%;
+  }
+
+  .tela-conteudo {
+    top: 20%;
+    left: 8%;
+    right: 8%;
+    height: 52%;
+  }
+
+  header h1 {
+    font-size: 1.2rem;
+  }
+
+  header input {
+    width: 90%;
+    font-size: 14px;
+  }
+
+  .pokemon-card {
+    width: 90%;
+    max-width: 200px;
+    min-height: auto;
+  }
+
+  .tipos-escolha {
+    grid-template-columns: 1fr; /* Botões um abaixo do outro */
+    max-width: 200px;
+  }
+}

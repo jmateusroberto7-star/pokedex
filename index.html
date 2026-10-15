@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokédex</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!--Moldura Pokédex-->
+  <div class="pokedex-wrapper">
+    <img src="Pokédex black.png" alt="pokedex" class="Imagem1">
+
+    <!-- Barra de pesquisa e Título-->
+    <div class="tela-conteudo">
+      <header>
+        <h1>Pokédex</h1>
+        <input type="text" id="campo-busca" placeholder="Buscar Pokémon">
+      </header>
+      <div class="floresta">
+        <img src="Floresta Pixel.jpg" alt="Floresta" class="Imagem2">
+      </div>
+
+      <!-- Área de Resultados -->
+      <main id="pokedex-container">
+        <!-- Opções de Tipo -->
+        <div id="opcoes-tipos" class="tipos-escolha oculto">
+          <button class="botao-tipo" data-tipo="eletrico">⚡ Tipo Elétrico</button>
+          <button class="botao-tipo" data-tipo="planta">🌿 Tipo Planta</button>
+          <button class="botao-tipo" data-tipo="fogo">🔥 Tipo Fogo</button>
+          <button class="botao-tipo" data-tipo="agua">💧 Tipo Água</button>
+        </div>
+
+        <!-- Cards dos Pokémon -->
+        <div id="card-pikachu" class="pokemon-card card-individual oculto">
+          <img src="pokémon tipo elétrico.webp" alt="Pikachu" class="pokemon-img">
+          <div class="pokemon-name">Pikachu</div>
+          <p class="texto1">Habilidades:</p>
+          <p class="texto2">Choque do Trovão — Dano: 110</p>
+          <p class="texto3">Cauda de Ferro — Dano: 60</p>
+        </div>
+
+        <div id="card-bulbasaur" class="pokemon-card card-individual oculto">
+          <img src="pokemon tipo Planta.webp" alt="Bulbasaur" class="pokemon-img">
+          <div class="pokemon-name">Bulbasaur</div>
+          <p class="texto4">Habilidades:</p>
+          <p class="texto5">Folha Navalha — Dano: 100</p>
+          <p class="texto6">Raio Solar — Dano: 50</p>
+        </div>
+
+        <div id="card-charizard" class="pokemon-card card-individual oculto">
+          <img src="pokemon tipo fogo.jpg" alt="Charizard" class="pokemon-img">
+          <div class="pokemon-name">Charizard</div>
+          <p class="texto7">Habilidades:</p>
+          <p class="texto8">Lança-Chamas — Dano: 120</p>
+          <p class="texto9">Corte Aéreo — Dano: 70</p>
+        </div>
+
+        <div id="card-squirtle" class="pokemon-card card-individual oculto">
+          <img src="pokemon tipo água.webp" alt="Squirtle" class="pokemon-img">
+          <div class="pokemon-name">Squirtle</div>
+          <p class="texto10">Habilidades:</p>
+          <p class="texto11">Jato de Água — Dano: 115</p>
+          <p class="texto12">Hidrobomba — Dano: 130</p>
+        </div>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </div>
+</body>
+</html>
